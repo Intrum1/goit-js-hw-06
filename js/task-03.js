@@ -14,19 +14,10 @@ const images = [
 ];
 
 const list = document.querySelector('.gallery');
-const imagesArr = images.map(image => {
-  const itemEl = document.createElement('li');
-  const imgEl = document.createElement('img');
-  imgEl.alt = `${image.alt}`;
-  imgEl.src = `${image.url}`;
-  imgEl.classList.add('image');
-  
-  itemEl.appendChild(imgEl);
 
-  return itemEl;
-})
-// list.append(...imagesArr)
-list.insertAdjacentHTML('beforend', '<li></li>')  
+const values = images.reduce((html, image) => html + `<li><img src="${image.url}" al="${image.alt}"></li>`, "") 
+
+list.insertAdjacentHTML('beforeend', values);
 
 // Використовуй масив об'єктів images для створення елементів <img>, 
 // вкладених в <li>. Для створення розмітки використовуй шаблонні рядки 

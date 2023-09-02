@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+  .gallery li {
+    list-style: none;
+    margin: 10px;
+  }
+
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +28,7 @@
     <p><a href="index.html">Go back</a></p>
 
     <ul class="gallery"></ul>
-
+    
     <script src="js/task-03.js" type="module"></script>
   </body>
 </html>
